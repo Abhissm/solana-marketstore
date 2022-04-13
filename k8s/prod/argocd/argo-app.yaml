@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-marketplace
+  namespace: argocd
+spec:
+  project: prod-marketplace
+  source:
+    repoURL: https://github.com/holaplex/marketplace.git
+    targetRevision: main
+    path: k8s/prod/app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod-marketplace
