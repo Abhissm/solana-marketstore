@@ -40,3 +40,10 @@ If you already have something running in port `80` already, feel free to change 
 
 Open a test marketplace, like [espi's marketplace](http://espi.dev.holaplex.market.127.0.0.1.nip.io).
 Page should load without issues.
+
+#clone the repo
+git clone https://github.com/metaplex-foundation/metaplex.git
+cd metaplex/js && yarn install && yarn bootstrap
+yarn build
+yarn start
+connect your phantom wallet with testnet or devnet
